@@ -1,13 +1,10 @@
-package com.company;
-
 public class Main {
 
     public static void main(String[] args) {
-        new Solver(new int[]{0,0}, new int[]{8,8});
+        new Solver(new int[]{0,0}, new int[]{new Integer(args[0]),new Integer(args[1])});
     }
 
     public static class Solver{
-
         
         int[] board;
         int[] board_size;
@@ -16,7 +13,6 @@ public class Main {
         public Solver(int[] start_pos, int[] board_size){
             this.board_size = board_size;
             board = new int[board_size[0]*board_size[1]];
-            lowest_backtrack = board.length;
             if (solve(1,start_pos)){
                 printSolution();
             }else{
