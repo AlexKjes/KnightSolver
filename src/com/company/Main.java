@@ -8,7 +8,7 @@ public class Main {
 
     public static class Solver{
 
-        int lowest_backtrack;
+        
         int[] board;
         int[] board_size;
         int[][] moves = {{2,1},{2,-1},{1,2},{1,-2},{-1,2},{-1,-2},{-2,1},{-2,-1}};
@@ -38,10 +38,6 @@ public class Main {
                                 return true;
                             }
                         }
-                    }
-                    if (lowest_backtrack > turn) {
-                        lowest_backtrack = turn;
-                        System.out.println("Failed.. backtracking. @ turn " + turn);
                     }
                     board[linear_pos] = 0;
                 }
